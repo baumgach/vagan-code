@@ -1,4 +1,4 @@
-# VAGAN Code
+# VA-GAN Code
 
 ![Method overview](figures/method.png)
 
