@@ -76,7 +76,7 @@ script.
    
 ## Bugs
  
-Please use the issue tracking tool to report bugs are email directly to [baumgartner@vision.ee.ethz.ch](mailto:baumgartner@vision.ee.ethz.ch). 
+Please use the issue tracking tool to report bugs or email directly to [baumgartner@vision.ee.ethz.ch](mailto:baumgartner@vision.ee.ethz.ch). 
 
 ## Results
 
