@@ -1,5 +1,7 @@
 # VAGAN Code
 
+![Method overview](figures/method.png)
+
 Public tensorflow implementation for the **Visual Feature Attribution using Wasserstein GANs** method, 
 which was accepted for presentation at [CVPR 2018](http://cvpr2018.thecvf.com/). 
 
@@ -19,8 +21,6 @@ found [here](https://arxiv.org/pdf/1711.08998.pdf).
 
 Author of this code:
 - Christian F. Baumgartner ([email](mailto:baumgartner@vision.ee.ethz.ch))
-
-![Method overview](figures/method.png)
 
 ## How to get the code to run:
 
