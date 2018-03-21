@@ -19,7 +19,7 @@ If you find this code helpful in your research please cite the following paper:
 The paper can be
 found [here](https://arxiv.org/pdf/1711.08998.pdf). 
 
-*Abstract*: Attributing the pixels of an input image to a certain category
+**Abstract**: Attributing the pixels of an input image to a certain category
 is an important and well-studied problem in computer
 vision, with applications ranging from weakly supervised
 localisation to understanding hidden effects in the data.
