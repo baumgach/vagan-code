@@ -1,0 +1,8 @@
+
+logdir
+outputs
+
+data/preproc_data
+.idea
+*.pyc
+*.swp
