@@ -25,7 +25,7 @@ use_sigmoid = False
 # Training settings
 batch_size = 30
 n_accum_grads = 1
-learning_rate = 1e-4
+learning_rate = 1e-3
 optimizer_handle = tf.train.AdamOptimizer
 beta1=0.9
 beta2=0.999
