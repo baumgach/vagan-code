@@ -5,7 +5,7 @@ from config import system as sys_config
 from vagan.network_zoo.nets3D import mask_generators, critics
 
 # Experiment name
-experiment_name = 'debug_rerun'
+experiment_name = 'adni_vagan'
 
 # Model settings
 critic_net = critics.C3D_fcn_16
