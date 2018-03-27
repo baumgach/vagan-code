@@ -37,7 +37,7 @@ def C3D_fcn_16_2D(x, training, scope_name='critic', scope_reuse=False):
                                          kernel_size=(1,1,1),
                                          activation=tf.identity)
 
-        logits = layers.averagepool3D_layer(convD_2, name='diagnosis_avg')
+        logits = layers.averagepool2D_layer(convD_2, name='diagnosis_avg')
 
 
     return logits
@@ -78,7 +78,7 @@ def C3D_fcn_16_2D_bn(x, training, scope_name='critic', scope_reuse=False):
                                          kernel_size=(1,1,1),
                                          activation=tf.identity)
 
-        logits = layers.averagepool3D_layer(convD_2, name='diagnosis_avg')
+        logits = layers.averagepool2D_layer(convD_2, name='diagnosis_avg')
 
 
     return logits

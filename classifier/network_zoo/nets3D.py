@@ -39,7 +39,7 @@ def FCN_32_bn(images, training, nlabels):
                                          kernel_size=(1,1,1),
                                          activation=tf.identity)
 
-        diag_logits = layers.averagepool2D_layer(convD_2, name='diagnosis_avg')
+        diag_logits = layers.averagepool3D_layer(convD_2, name='diagnosis_avg')
 
     return diag_logits
 
@@ -70,7 +70,7 @@ def allconv_bn(images, training, nlabels):
                                          kernel_size=(1,1,1),
                                          activation=tf.identity)
 
-        diag_logits = layers.averagepool2D_layer(convD_2, name='diagnosis_avg')
+        diag_logits = layers.averagepool3D_layer(convD_2, name='diagnosis_avg')
 
     return diag_logits
 

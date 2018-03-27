@@ -77,7 +77,7 @@ def rebuttalnet2D(x, nlabels, training, scope_reuse=False):
 
         convD_1 = layers.conv2D_layer_bn(conv5_2, 'convD_1', num_filters=init_filters*16, training=training)
 
-        avg_pool = layers.averagepool3D_layer(convD_1, name='avg_pool')
+        avg_pool = layers.averagepool2D_layer(convD_1, name='avg_pool')
 
         logits = layers.dense_layer_bn(avg_pool, 'dense2', hidden_units=nlabels, training=training, activation=tf.identity)
 
@@ -202,7 +202,7 @@ def CAM_net2D(x, nlabels, training, scope_reuse=False):
 
         convD_1 = layers.conv2D_layer_bn(conv5_2, 'feature_maps', num_filters=init_filters*16, training=training)
 
-        fm_averages = layers.averagepool3D_layer(convD_1, name='fm_averages')
+        fm_averages = layers.averagepool2D_layer(convD_1, name='fm_averages')
 
         logits = layers.dense_layer(fm_averages, 'weight_layer', hidden_units=nlabels, activation=tf.identity, add_bias=False)
 

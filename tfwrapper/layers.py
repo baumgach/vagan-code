@@ -41,7 +41,7 @@ def maxpool3D_layer(x, kernel_size=(2, 2, 2), strides=(2, 2, 2), padding="SAME")
 
     return op
 
-def averagepool2D_layer(x, name=None):
+def averagepool3D_layer(x, name=None):
     '''
     nets3D max pooling layer with 2x2x2 pooling as default
     '''
@@ -52,7 +52,7 @@ def averagepool2D_layer(x, name=None):
     return op
 
 
-def averagepool3D_layer(x, name=None):
+def averagepool2D_layer(x, name=None):
     '''
     nets3D max pooling layer with 2x2x2 pooling as default
     '''
