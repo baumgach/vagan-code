@@ -35,8 +35,8 @@ def main(model_path, exp_config):
 
     # classifier_model.initialise_saliency(mode='additive_pertubation')
     # classifier_model.initialise_saliency(mode='backprop')
-    classifier_model.initialise_saliency(mode='integrated_gradients')
-    # classifier_model.initialise_saliency(mode='guided_backprop')
+    # classifier_model.initialise_saliency(mode='integrated_gradients')
+    classifier_model.initialise_saliency(mode='guided_backprop')
     # classifier_model.initialise_saliency(mode='CAM')  # Requires CAM net (obvs)
 
     classifier_model.load_weights(model_path, type='best_xent')

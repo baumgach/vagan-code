@@ -259,9 +259,7 @@ class classifier:
             g = tf.get_default_graph()
             with g.gradient_override_map({'Relu': 'GuidedRelu'}):
                 l_sal = self.exp_config.classifier_net(self.x_pl, nlabels=self.nlabels, training=self.training_pl, scope_reuse=True)
-                # self.l_sal = self.l_sal[0,self.lbl_selector]
                 y_sal = tf.nn.softmax(l_sal)[0,self.lbl_selector]
-
             self.saliency = tf.gradients(y_sal, self.x_pl)
 
         elif mode in ['backprop', 'integrated_gradients']:
