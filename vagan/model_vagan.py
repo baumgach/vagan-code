@@ -117,15 +117,16 @@ class vagan:
         if self.exp_config.improved_training:
 
             critic_net = self.exp_config.critic_net
-            epsilon = tf.random_uniform([], 0.0, 1.0)
+            epsilon = tf.random_uniform([tf.shape(self.x_c1)[0],1,1,1], 0.0, 1.0)
+
             x_hat = epsilon * self.x_c0 + (1 - epsilon) * self.y_c0_
             d_hat = critic_net(x_hat, self.training_pl_cri, scope_reuse=True)
 
-            ddx = tf.gradients(d_hat, x_hat)[0]
-            ddx = tf.sqrt(tf.reduce_sum(tf.square(ddx), axis=1))
-            ddx = tf.reduce_mean(tf.square(ddx - 1.0) * self.exp_config.scale)
+            grads = tf.gradients(d_hat, x_hat)[0]
+            slopes = tf.sqrt(tf.reduce_sum(tf.square(grads), axis=1))
+            penalty = self.exp_config.scale * tf.reduce_mean(tf.square(slopes - 1.0))
 
-            cri_loss += ddx
+            cri_loss += penalty
 
         return cri_loss
 

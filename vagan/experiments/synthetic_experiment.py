@@ -28,7 +28,7 @@ beta2 = 0.9
 # Training settings
 batch_size = 32
 n_accum_grads = 1
-learning_rate = 1e-3
+learning_rate = 1e-4  # Used 1e-3 for experiments in paper, but 1e-4 works a bit better
 divide_lr_frequency = None
 critic_iter = 5
 critic_iter_long = 100
