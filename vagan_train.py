@@ -12,8 +12,8 @@ def main():
 
     # Select experiment below:
 
-    # from vagan.experiments import adni_experiment as exp_config
-    from vagan.experiments import synthetic_experiment as exp_config
+    from vagan.experiments import adni_experiment as exp_config
+    # from vagan.experiments import synthetic_experiment as exp_config
 
     # Get Data
     if exp_config.data_identifier == 'synthetic':

@@ -343,9 +343,11 @@ if __name__ == '__main__':
     # d=load_and_maybe_process_data(input_folder, preprocessing_folder, (128, 160, 112), (1.5, 1.5, 1.5), (0,2), force_overwrite=False, rescale_to_one=True)
     # d=load_and_maybe_process_data(input_folder, preprocessing_folder, (64, 80, 64), (1.5, 1.5, 1.5), (0,2), offset=(0,0,-10), force_overwrite=False, rescale_to_one=True)
 
-    import config.system as sys_config
+    # import config.system as sys_config
+    #
+    # sys_config.project_root,
 
-    data_root = os.path.join(sys_config.data_root, 'ADNI_allfixed_allPP_robex')
-    preproc_folder = os.path.join(sys_config.project_root, 'data/preproc_data/allfixed_noskull')
+    data_root = '/usr/bmicnas01/data-biwi-01/bmicdatasets/Processed/ADNI_Christian/ADNI_allfixed_allPP_robex'
+    preproc_folder = os.path.join('./data/preproc_data/allfixed_noskull')
 
     d=load_and_maybe_process_data(data_root, preproc_folder, (128, 160, 112), (1.3, 1.3, 1.3), (0,1,2), offset=None, force_overwrite=True, rescale_to_one=False)
