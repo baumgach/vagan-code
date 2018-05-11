@@ -35,6 +35,8 @@ class vagan:
         self.exp_config = exp_config
         self.data = data
 
+        self.mode3D = True if len(exp_config.image_size) == 3 else False
+
         self.critic_net = exp_config.critic_net
         self.generator_net = exp_config.generator_net
 
@@ -117,7 +119,13 @@ class vagan:
         if self.exp_config.improved_training:
 
             critic_net = self.exp_config.critic_net
-            epsilon = tf.random_uniform([tf.shape(self.x_c1)[0],1,1,1], 0.0, 1.0)
+
+            if self.mode3D:
+                epsilon_shape = [tf.shape(self.x_c1)[0], 1, 1, 1, 1]
+            else:
+                epsilon_shape = [tf.shape(self.x_c1)[0], 1, 1, 1]
+
+            epsilon = tf.random_uniform(epsilon_shape, 0.0, 1.0)
 
             x_hat = epsilon * self.x_c0 + (1 - epsilon) * self.y_c0_
             d_hat = critic_net(x_hat, self.training_pl_cri, scope_reuse=True)
