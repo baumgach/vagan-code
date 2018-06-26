@@ -237,6 +237,7 @@ class classifier:
 
         self.saver.restore(self.sess, init_checkpoint_path)
 
+
     def predict(self, images):
 
         prediction, softmax = self.sess.run([self.p_pl_, self.y_pl_],
@@ -245,6 +246,7 @@ class classifier:
         confidence = softmax[prediction]
 
         return prediction, confidence
+
 
     def initialise_saliency(self, mode, **kwargs):
 
