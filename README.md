@@ -8,11 +8,12 @@ which was accepted for presentation at [CVPR 2018](http://cvpr2018.thecvf.com/).
 If you find this code helpful in your research please cite the following paper:
 
 ```
-@article{baumgartner2017visual,
-  title={Visual Feature Attribution using Wasserstein GANs},
-  author={Baumgartner, Christian F and Koch, Lisa M and Tezcan, Kerem Can and Ang, Jia Xi and Konukoglu, Ender},
-  journal={arXiv preprint arXiv:1711.08998},
-  year={2017}
+@InProceedings{baumgartner2018visual,
+author = {Baumgartner, Christian F. and Koch, Lisa M. and Tezcan, Kerem Can and Ang, Jia Xi and Konukoglu, Ender},
+title = {Visual Feature Attribution Using Wasserstein {GAN}s},
+booktitle = {The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+month = {June},
+year = {2018}
 }
 ```
 
