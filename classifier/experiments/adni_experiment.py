@@ -23,7 +23,6 @@ rescale_to_one = False
 
 # Cost function
 weight_decay = 0.0
-use_sigmoid = False
 
 # Training settings
 batch_size = 3

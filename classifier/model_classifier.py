@@ -83,11 +83,10 @@ class classifier:
 
     def classification_loss(self):
 
-        y_onehot = tf.one_hot(self.y_pl, depth=self.nlabels)
+        y_for_loss = tf.one_hot(self.y_pl, depth=self.nlabels)
 
         classification_loss = losses.cross_entropy_loss(logits=self.l_pl_,
-                                                        labels=y_onehot,
-                                                        use_sigmoid=self.exp_config.use_sigmoid)
+                                                        labels=y_for_loss)
 
         return classification_loss
 
@@ -285,10 +284,7 @@ class classifier:
 
             network_input = self.x_pl + self.sal_mask_var
             logits = self.exp_config.classifier_net(network_input, nlabels=self.nlabels, training=self.training_pl, scope_reuse=True)
-            if self.exp_config.use_sigmoid:
-                y = tf.nn.sigmoid(logits)[0]
-            else:
-                y = tf.nn.softmax(logits)[0, self.lbl_selector]
+            y = tf.nn.softmax(logits)[0, self.lbl_selector]
 
             l1_norm = tf.reduce_sum(tf.abs(self.sal_mask_var))
             total_variation = tf_utils.total_variation(self.sal_mask_var, beta=beta)
