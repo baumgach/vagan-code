@@ -6,9 +6,12 @@ import tensorflow as tf
 from tfwrapper import layers
 
 
-def FCN_32_bn(images, training, nlabels):
+def FCN_32_bn(images, training, nlabels, scope_reuse=False):
 
-    with tf.variable_scope('classifier'):
+    with tf.variable_scope('classifier') as scope:
+
+        if scope_reuse:
+            scope.reuse_variables()
 
         conv1_1 = layers.conv3D_layer_bn(images, 'conv1_1', num_filters=32, training=training)
 
@@ -45,9 +48,12 @@ def FCN_32_bn(images, training, nlabels):
 
 
 
-def allconv_bn(images, training, nlabels):
+def allconv_bn(images, training, nlabels, scope_reuse=False):
 
-    with tf.variable_scope('classifier'):
+    with tf.variable_scope('classifier') as scope:
+
+        if scope_reuse:
+            scope.reuse_variables()
 
         conv1_1 = layers.conv3D_layer_bn(images, 'conv1_1', num_filters=32, training=training, strides=(2,2,2))
 
@@ -75,9 +81,12 @@ def allconv_bn(images, training, nlabels):
     return diag_logits
 
 
-def C3D_32_bn(images, training, nlabels):
+def C3D_32_bn(images, training, nlabels, scope_reuse=False):
 
-    with tf.variable_scope('classifier'):
+    with tf.variable_scope('classifier') as scope:
+
+        if scope_reuse:
+            scope.reuse_variables()
 
         conv1_1 = layers.conv3D_layer_bn(images, 'conv1_1', num_filters=32, training=training)
 
