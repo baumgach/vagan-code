@@ -50,15 +50,10 @@ Author of this code:
 
 ## How to get the code to run:
 
- * Step 1: Set up a virtual environment (e.g. conda or virtualenv) with Python 3 (I used 3.4.3), and tensorflow 
- (I used version 1.2). There is a requirements.txt file so `pip install -r requirements.txt`
-  should work.
-
-Potential caveat: We had to use the dev version of skimage to allow for 3D image 
-resampling of the ADNI data. Previously, we had problems to compile it with anything 
-else but Python 3.4.3. However, if you don't need this function 
-(which you don't on 2D data) you can simply use the normal `pip install scikit-image`.
-
+ * Step 1: Set up a virtual environment (e.g. conda or virtualenv) with Python 3 (I use Python 3.5), and tensorflow 
+ (I used version 1.12). There is a requirements.txt file so `pip install -r requirements.txt`
+  should work. Tensorflow is not included in the requirements file so you can decide whether you want
+  to install the GPU or CPU version. 
 
  * Step 2: Open `config/system.py` and change the settings to match your system.
 

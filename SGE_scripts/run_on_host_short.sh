@@ -9,7 +9,7 @@
 # Author: Christian F. Baumgartner (c.f.baumgartner@gmail.com)
 
 ## SET THE FOLLOWING VARIABLES ACCORDING TO YOUR SYSTEM ##
-CUDA_HOME=/scratch_net/bmicdl03/libs/cuda-8.0-bmic
+CUDA_HOME=/scratch_net/bmicdl03/libs/cuda-9.0
 PROJECT_HOME=/scratch_net/bmicdl03/code/python/vagan-code/
 VIRTUAL_ENV_PATH=/scratch_net/bmicdl03/code/python/environments/tensorflow1.2-gpu/
 
@@ -26,7 +26,7 @@ VIRTUAL_ENV_PATH=/scratch_net/bmicdl03/code/python/environments/tensorflow1.2-gp
 
 # Host and gpu settings
 #$ -l gpu
-##$ -l hostname=bmicgpu01   ## <-------------- Comment in or out to force a specific machine
+#$ -l hostname=bmicgpu01   ## <-------------- Comment in or out to force a specific machine
 
 ## stderr and stdout are merged together to stdout
 #$ -j y

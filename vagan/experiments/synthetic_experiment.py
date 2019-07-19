@@ -5,7 +5,7 @@ import config.system as sys_config
 from vagan.network_zoo.nets2D import critics, mask_generators
 
 # Experiment name
-experiment_name = 'synth_vagan'
+experiment_name = 'synth_vagan_rerun'
 
 # Model settings
 critic_net = critics.C3D_fcn_16_2D

@@ -20,7 +20,7 @@ label_list = (1,2)  # 0 - normal, 1 - mci, 2 - alzheimer's
 label_name = 'diagnosis'
 nlabels = len(label_list)
 data_root = '/usr/bmicnas01/data-biwi-01/bmicdatasets/Processed/ADNI_Christian/ADNI_allfixed_allPP_robex'
-preproc_folder = os.path.join(sys_config.project_root,'data/preproc_data/allfixed_noskull')
+preproc_folder = '/srv/beegfs02/scratch/baumgach_data/data/preproc_data/vagan_adni/'
 rescale_to_one = True
 image_z_slice = 56  # for displaying images during training
 
