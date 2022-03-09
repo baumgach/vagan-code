@@ -20,9 +20,9 @@ year = {2018}
 The paper can be
 found [here](https://arxiv.org/pdf/1711.08998.pdf). 
 
-Don't like tensorflow? A pytorch version implemented by 
-[Orobix](https://orobix.com/) can be found 
-[here](https://github.com/orobix/Visual-Feature-Attribution-Using-Wasserstein-GANs-Pytorch).
+There is also a pytorch version of the code implemented by 
+[Orobix](https://orobix.com/), which can be found 
+[here](https://github.com/orobix/Visual-Feature-Attribution-Using-Wasserstein-GANs-Pytorch). However, we would like to note that this third-party implementation has some issues, and we do not currently fully endorse using it. 
 
 **Abstract**: Attributing the pixels of an input image to a certain category
 is an important and well-studied problem in computer
